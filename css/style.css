@@ -1,0 +1,21 @@
+.slides-navigation .prev,
+.slides-navigation .next {
+height: 47px; width: 47px;
+    background-size: cover;
+}
+
+.slides-navigation a.prev {
+    left: 20px;
+background-image: url(../img/icons/prev.png);
+}
+
+.slides-navigation a.next {
+    right: 20px;
+background-image: url(../img/icons/next.png);
+}
+.overlay{
+    height: 100%; width: 100%;
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    z-index: 3;
+}
