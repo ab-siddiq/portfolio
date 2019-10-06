@@ -1,5 +1,8 @@
 /*Main Slider Section Start*/
-.slides-navigation .prev, .slides-navigation .next {
+.slides-navigation{
+    z-index: 6;
+}
+ .prev, .slides-navigation .next {
     height: 47px; width: 47px; background-size: cover;
 }
 
