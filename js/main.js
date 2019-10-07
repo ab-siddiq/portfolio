@@ -1,12 +1,15 @@
 $(document).ready(function () {
-    //    Super Slides
+
+    //    Super Slides Start
     $('#slides').superslides({
         play: 5000,
         animation: 'slide',
         pagination: false,
 
     });
-    //Typed JS
+    //    Super Slides Start
+
+    //Typed JS Start
     var typed = new Typed('.typed', {
         // Waits 1000ms after typing "First"
         strings: ['Web Designer', 'Web Developer', 'Laravel Developer'],
@@ -14,7 +17,22 @@ $(document).ready(function () {
         typeSpeed: 70,
         showCursor: false,
     });
-    //    Owl Carousel
+    //Typed JS Ennd
+
+    // Slide Navigation Start
+    $("#navigation li a").click(function () {
+        e.preventDefault();
+
+        var targetElement = $(this).attr("href");
+        var targetPosition = $(targetElement).offset().top;
+        $("html, body").animate({
+            scrollTop: targetPosition - 100
+        }, "slow");
+
+    });
+    // Slide Navigation Start
+
+    //    Owl Carousel Start
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 10,
@@ -31,8 +49,9 @@ $(document).ready(function () {
             }
         }
     });
+    //    Owl Carousel Start End
 
-    //EasyPieChart plugin
+    //EasyPieChart plugin Start
     var skillsTopOffset = $(".skill-section").offset().top;
     $(window).scroll(function () {
         if (window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
@@ -50,4 +69,14 @@ $(document).ready(function () {
             });
         }
     });
+    //EasyPieChart plugin Start
+
+    //    Counter Plugin Start
+    $(".counter").counterUp({
+        delay: 5,
+        time: 1000
+    });
+    //    Counter Plugin End
+
+
 });
