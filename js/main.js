@@ -77,6 +77,27 @@ $(document).ready(function () {
         time: 1000
     });
     //    Counter Plugin End
+    //    Fancybox Start
+    $("[data-fancybox]").fancybox();
+    //    Fancybox End
+
+    //    Isotope Animations Option Start (sort & filtering)
+    $("#filters a").click(function) {
+        $("#filters .current").removeClass("current");
+        $(this).addClass("current");
+        var selector = $(this).attr("data-filter");
+        $('.items').isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+    });
+return false;
+//    Isotope Animations Option End (Sort & filtering)
+
 
 
 });
